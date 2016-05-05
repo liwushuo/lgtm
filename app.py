@@ -54,8 +54,7 @@ def check_repo(repo_name):
             logger.debug('%s pull %d has not been approved.', repo_name, pull.number)
             continue
 
-        pull.merge('''%s\n%s\nThis pull request is merged by `lgtmbot`.''' % (
-            pull.title, pull.body))
+        pull.merge()
         logger.info('%s pull %d merged.', repo_name, pull.number)
     logger.debug('scanned %s at %s', repo_name, datetime.utcnow())
 
