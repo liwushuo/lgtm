@@ -34,7 +34,7 @@ def is_approved(repo_name, pull):
         comment for comment in pull.get_issue_comments()
         if is_valid_comment(repo_name, pull, comment)
     ]
-    return len(comments) >= config['github']['approve_number']
+    return len(comments) >= config['github']['approvals']
 
 
 def check_repo(repo_name):

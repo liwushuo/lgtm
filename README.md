@@ -19,7 +19,7 @@ github:
     - lgtm
     - ':shipit:'
   include_self: true
-  approve_number: 3
+  approvals: 3
   repos:
     org/repo:
       - maintainer1
